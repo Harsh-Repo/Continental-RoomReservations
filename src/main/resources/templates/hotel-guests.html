@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Continental: Guests</title>
+</head>
+<body>
+<h1>Welcome to Guests Page</h1>
+<table>
+    <tr>
+        <td>Last Name</td>
+        <td>First Name</td>
+        <td>Email Address</td>
+        <td>Phone Number</td>
+    </tr>
+
+    <tr th:each=" guest: ${guests}">
+<!--        Just to see similarity of td and span-->
+<!--        <span th:text="${guest.LastName}">Last Name></span>-->
+<!--        <span th:text="${guest.firstName}">First Name</span>-->
+<!--        <span th:text="${guest.emailAddress}">Email Address</span>-->
+<!--        <span th:text="${guest.phone_Number}">Phone Number</span>-->
+        <td th:text="${guest.LastName}">Last Name</td>
+        <td th:text="${guest.firstName}">First Name</td>
+        <td th:text="${guest.emailAddress}">Email Address</td>
+        <td th:text="${guest.phone_Number}">Phone Number</td>
+    </tr>
+</table>
+
+</body>
+</html>
